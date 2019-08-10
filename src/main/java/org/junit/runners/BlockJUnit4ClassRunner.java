@@ -257,7 +257,10 @@ public class BlockJUnit4ClassRunner extends ParentRunner<FrameworkMethod> {
      * @since 4.13
      */
     protected Object createTest(FrameworkMethod method) throws Exception {
-        return createTest();
+        // ?????????????????????????
+        Object o = createTest();
+        System.out.println(String.format("new object %s for %s", o.toString(), method.getMethod().toString()));
+        return o;
     }
 
     /**
