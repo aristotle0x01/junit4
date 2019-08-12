@@ -359,6 +359,8 @@ public abstract class ParentRunner<T> extends Runner implements Filterable,
      */
     protected final void runLeaf(Statement statement, Description description,
             RunNotifier notifier) {
+        System.out.println("runLeaf " + description.getDisplayName());
+
         EachTestNotifier eachNotifier = new EachTestNotifier(notifier, description);
         eachNotifier.fireTestStarted();
         try {
